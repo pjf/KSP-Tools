@@ -43,8 +43,7 @@ sub delete_parts {
     foreach my $part (@parts) {
         if (not ref $part) {
             my $path = "$GameData/$part";
-            say $path;
-            # remove_tree("$GameData/$part", { verbose => 1 } );
+            remove_tree("$GameData/$part", { verbose => 1 } );
         }
         elsif ('ARRAY' eq ref $part) {
             delete_parts(@$part);
