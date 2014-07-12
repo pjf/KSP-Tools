@@ -8,6 +8,13 @@ use File::Spec;
 use IPC::System::Simple qw(capture);
 use constant MOD_GAMEDATA => 'GameData';
 
+# Update KSP GameData from git repos.
+# Assumes you love git as much as I do. :)
+# 
+# Paul '@pjf' Fenwick, July 2014
+#
+# License: Same as Perl itself
+
 my $Player_GameData = "$ENV{HOME}/Steam/SteamApps/common/Kerbal Space Program/GameData";
 
 # Turn mods into absolute paths
